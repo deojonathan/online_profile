@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+
+@mixin header-theme($theme){
+  $config: mat-get-color-config($theme);
+  $primary: map-get($config, primary);
+  $accent: map-get($config, accent);
+  $warn: map-get($config, warn);
+
+  .mat-toolbar {
+    background-color: mat-color($primary, lighter);
+  }
+}
