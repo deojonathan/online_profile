@@ -1,0 +1,38 @@
+@import '~@angular/material/theming';
+@import '../../styling/palette.scss';
+
+@mixin profile-theme($theme){
+  $config: mat-get-color-config($theme);
+  $primary: map-get($config, primary);
+  $primary-foreground: map-get($primary, default-contrast);
+  $accent: map-get($config, accent);
+  $warn: map-get($config, warn);
+  $background: $app-custom-background;
+  $surface-background: $app-custom-surface-background;
+
+  section.about mat-card {
+    background-color: $surface-background;
+  }
+
+  .banner {
+    background-color: mat-color($primary);
+    color: $primary-foreground;
+
+    .job-desc {
+      color: mat-color($accent);
+    }
+  }
+
+  section.about {
+    mat-card.about-card {
+      @include mat-elevation(1);
+    }
+    mat-card h3.about {
+      color: mat-color($primary, darker);
+    }
+  }
+
+  section {
+    background-color: $background;
+  }
+}

@@ -1,0 +1,80 @@
+$banner-content-padding: 30px;
+
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  div, h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+section.container.banner {
+  padding: $banner-content-padding;
+  align-items: flex-start;
+
+  .name {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 1em;
+  }
+}
+
+section.container.about {
+  justify-content: center;
+
+  mat-card {
+    margin: 0;
+    padding: $banner-content-padding;
+  }
+
+  mat-card mat-card-content.about-content {
+    padding: 0;
+    margin: 0;
+  }
+
+  mat-card mat-card-content ul.tech-list {
+    margin: 2em;
+  }
+
+  mat-card mat-card-actions {
+    .row.action-buttons {
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  section.container.banner .name {
+    font-size: 70px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  section.container.banner.name{
+    font-size: 90px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  section.container.banner {
+    align-items: center;
+    .name {
+      font-size: 100px;
+    }
+  }
+  section.container.about {
+    padding-top: 30px;
+    align-items: center;
+    justify-content: center;
+    mat-card {
+      max-width: 600px;
+    }
+  }
+
+}

@@ -1,3 +1,7 @@
-  <mat-toolbar>
-    Test
-  </mat-toolbar>
+<nav mat-tab-nav-bar class="nav container">
+  <a mat-tab-link class="nav-link" *ngFor="let tab of tabs; let id = index"
+     (click)="tabClicked(id)"
+     [active]="activeLink==id">
+    {{tab.label}}
+  </a>
+</nav>

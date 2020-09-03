@@ -1,12 +1,14 @@
 @import '~@angular/material/theming';
+@import '../styling/palette';
 
 @mixin app-theme($theme){
   $config: mat-get-color-config($theme);
   $primary: map-get($config, primary);
   $accent: map-get($config, accent);
   $warn: map-get($config, warn);
+  $background: $app-custom-background;
 
-  div.container {
-    background-color: mat-color($primary);
+  body {
+    background-color: $background;
   }
 }

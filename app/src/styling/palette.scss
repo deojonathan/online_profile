@@ -1,0 +1,44 @@
+@import '~@angular/material/theming';
+
+// Generated using http://mcg.mbitson.com/
+// The input color was #203354.
+$mat-custom-navy-blue: (
+    50 : #e4e7ea,
+    100 : #bcc2cc,
+    200 : #9099aa,
+    300 : #637087,
+    400 : #41526e,
+    500 : #203354,
+    600 : #1c2e4d,
+    700 : #182743,
+    800 : #13203a,
+    900 : #0b1429,
+    A100 : #678fff,
+    A200 : #3469ff,
+    A400 : #0143ff,
+    A700 : #003ce6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$app-custom-background: #E8E5E2;
+$background-palette: mat-palette($mat-custom-navy-blue, 500);
+// $app-custom-background: mat-color($background-palette, lighter);
+$app-custom-surface-background: white;
+// $background-palette: mat-palette($mat-grey, 300);
+// $app-custom-background: mat-color($background-palette);
+// $app-custom-surface-background: mat-color($background-palette);

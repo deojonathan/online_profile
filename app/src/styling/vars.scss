@@ -1,0 +1,6 @@
+$global-side-margin: 15%;
+$max-width: 1000px;
+
+@mixin global-side-margin() {
+  margin: 0 $global-side-margin;
+}

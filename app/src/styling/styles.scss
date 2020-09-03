@@ -1,23 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
-
 /* TODO(deojonathan@): Add global styles here. */
+* {
+  margin: 0;
+  padding: 0;
+}
 
-div.container {
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+.container {
   display: flex;
   flex-flow: column nowrap;
-  width: 100%;
-  height: 100%;
 
-  div.row {
+  .row {
     display: flex;
     flex-flow: row nowrap;
-
-    div.col {
-      display: flex;
-      flex-flow: column nowrap;
-    }
   }
 }
+
 /* Auto-generated upon installation of Angular material module. */
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
