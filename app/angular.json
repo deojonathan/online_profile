@@ -29,7 +29,7 @@
             ],
             "styles": [
               "src/styling/styles.scss",
-              "src/styling/theme.scss",
+              "src/styling/theme.scss"
             ],
             "scripts": []
           },
@@ -122,6 +122,14 @@
             "production": {
               "devServerTarget": "app:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/app",
+            "netlifyToken": "ZHBglfVU2pAICMeIbYStKIK_Zn6hATx0sLMeOTJ1Q9g",
+            "siteId": "867ef5b4-38ae-4558-8e43-cde7274280c3"
           }
         }
       }
