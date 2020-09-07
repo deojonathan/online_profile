@@ -10,8 +10,9 @@
 
 <section class="container about">
   <mat-card class="about-card">
-    <h3 class="mat-h3 about">
-      <b>About Me</b>
+    <h3 class="mat-h3 about row">
+      <mat-icon>info</mat-icon>
+      <b class="about-header">About Me</b>
     </h3>
     <mat-card-content class="about-content">
       <p>TL;DR</p>
@@ -28,24 +29,36 @@
         and had experience working for several corporate companies in the tech industry.
       </p>
       <p>
-        Here are some of the technologies that I currently use in my projects:
+        Here are some of the technologies that I am interested in and currently use in my projects:
       </p>
-      <ul class="tech-list">
+      <div class="tech-list-wrapper row">
+      <ul class="tech-list-left">
         <li>Angular, Javascript</li>
         <li>HTML & (S)CSS</li>
-        <li>Python, GoLang</li>
+        <li>Python</li>
+        <li>GoLang</li>
+      </ul>
+      <ul class="tech-list-right">
         <li>Docker</li>
         <li>Figma</li>
+        <li>GraphQL</li>
+        <li>OAuth, OpenID</li>
       </ul>
+      </div>
     </mat-card-content>
     <mat-card-actions>
       <div class="row action-buttons">
-        <a class="action-portfolio" href="#" mat-raised-button color="accent">
-          My Portfolio >>
-        </a>
-        <button class="action-contact" mat-raised-button color="accent">
+        <a class="action-contact row"
+           color="accent"
+           target="_blank"
+           href="mailto:deojonathanguillermo22@gmail.com" mat-raised-button>
+          <mat-icon>mail_outline</mat-icon>
           Contact Me
-        </button>
+        </a>
+        <a class="action-portfolio" href="#" mat-raised-button color="accent">
+          <mat-icon>dashboard</mat-icon>
+          View my Portfolio
+        </a>
       </div>
     </mat-card-actions>
   </mat-card>

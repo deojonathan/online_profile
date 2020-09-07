@@ -1,7 +1,10 @@
+<header>
 <nav mat-tab-nav-bar class="nav container">
-  <a mat-tab-link class="nav-link" *ngFor="let tab of tabs; let id = index"
+  <a mat-tab-link class="nav-link" *ngFor="let tab of tabs; let id=index"
      (click)="tabClicked(id)"
      [active]="activeLink==id">
-    {{tab.label}}
+    <mat-icon>{{tab.icon}}</mat-icon>
+    <div class="tab-label">{{tab.label}}</div>
   </a>
 </nav>
+</header>

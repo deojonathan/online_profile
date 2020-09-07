@@ -31,19 +31,35 @@ section.container.about {
     padding: $banner-content-padding;
   }
 
-  mat-card mat-card-content.about-content {
-    padding: 0;
-    margin: 0;
+  mat-card .about.row {
+    align-items: center;
+    .about-header {
+      margin: 0 0 0 5px;
+    }
   }
 
-  mat-card mat-card-content ul.tech-list {
+  mat-card mat-card-content.about-content {
+    padding: 0;
+    margin: 10px  0 0 30px;
+  }
+
+  mat-card mat-card-content .tech-list-wrapper {
     margin: 2em;
+    .tech-list-right {
+      margin: 0 0 0 50px;
+    }
   }
 
   mat-card mat-card-actions {
     .row.action-buttons {
       justify-content: flex-end;
+      align-items: center;
       width: 100%;
+
+      action-contact.row {
+        justify-content: center;
+        align-content: center;
+      }
     }
   }
 }
