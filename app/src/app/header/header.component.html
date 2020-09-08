@@ -1,10 +1,25 @@
-<header>
-<nav mat-tab-nav-bar class="nav container">
+<header class="header-nav-container">
+<nav mat-tab-nav-bar
+     *ngIf="!isMobile"
+     class="header-nav container">
   <a mat-tab-link class="nav-link" *ngFor="let tab of tabs; let id=index"
      (click)="tabClicked(id)"
-     [active]="activeLink==id">
+     [active]="activeLink==id"
+     routerLink="{{ tab.routerLink }}"
+     routerLinkActive="active">
     <mat-icon>{{tab.icon}}</mat-icon>
     <div class="tab-label">{{tab.label}}</div>
   </a>
 </nav>
+<button mat-button
+        *ngIf="isMobile"
+        [matMenuTriggerFor]="menu">
+  <mat-icon class="menu-icon">menu</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <a *ngFor="let tab of tabs"
+     mat-menu-item
+     routerLink="{{ tab.routerLink }}"
+     routerLinActive="active">{{ tab.label }}</a>
+</mat-menu>
 </header>

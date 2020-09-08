@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { MatTabLink } from '@angular/material/tabs/tab-nav-bar/tab-nav-bar';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +9,8 @@ import { MatTabLink } from '@angular/material/tabs/tab-nav-bar/tab-nav-bar';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  private unsubscribe = new Subject<void>();
+  isMobile: boolean = true;
   activeLink: number = 0;
   tabs = [
     { routerLink: 'home', label: 'Home', icon: 'home'},
@@ -14,13 +18,32 @@ export class HeaderComponent implements OnInit {
     { routerLink: 'services', label: 'Services', icon: 'miscellaneous_services'},
   ];
 
-  constructor() {
+  constructor(private breakpointObserver: BreakpointObserver) {
+    this.breakpointObserver.observe([
+      Breakpoints.Handset,
+      Breakpoints.Tablet,
+    ]).pipe(takeUntil(this.unsubscribe)).subscribe(result => {
+      if (result.matches) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+    })
   }
 
   ngOnInit(): void {
   }
 
+  ngOnDestroy(): void {
+    this.unsubscribe.next();
+    this.unsubscribe.complete();
+  }
+
   tabClicked(id: number) {
     this.activeLink = id;
+  }
+
+  activateMobileLayout() {
+    console.log("mobile layout detected");
   }
 }

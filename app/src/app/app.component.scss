@@ -1,10 +1,6 @@
 @import "../styling/vars";
 
 div.container.app {
-  flex-flow: col wrap;
+  flex-flow: column wrap;
   margin: auto;
-
-  app-header {
-    width: 100%;
-  }
-}
+ }

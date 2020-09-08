@@ -12,13 +12,18 @@ $banner-content-padding: 30px;
   }
 }
 
-section.container.banner {
-  padding: $banner-content-padding;
-  align-items: flex-start;
+.banner {
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
 
-  .name {
+  .hero {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .hero .name {
     font-weight: bold;
-    font-size: 50px;
     line-height: 1em;
   }
 }
@@ -64,13 +69,13 @@ section.container.about {
   }
 }
 
-@media only screen and (min-width: 375px) {
-  section.container.banner .name {
-    font-size: 70px;
-  }
-}
-
 @media only screen and (min-width: 768px) {
+
+ .banner {
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+ }
 
   section.container.banner.name{
     font-size: 90px;

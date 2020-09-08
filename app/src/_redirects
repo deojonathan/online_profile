@@ -1,0 +1,9 @@
+# Redirect file for Netlify environment
+# For more info: see the following articles:
+# https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file
+# https://medium.com/@mgd4375/how-to-enable-angular-routing-in-a-netlify-deployment-with-the-angular-cli-e2eda69f1b5b
+# Without this file, angular routing seems to be overriden by Netlify.
+
+# Just ensure that every path redirects to index.html so angular routing
+# is not overriden.
+/*      /index.html     200

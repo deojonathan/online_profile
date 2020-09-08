@@ -5,6 +5,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { LayoutModule } from '@angular/cdk/layout';
 
 /**
  * NgModule that includes all Material modules.
@@ -17,6 +19,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
+    MatMenuModule,
+    LayoutModule,
   ]
 })
 export class MaterialModule { }

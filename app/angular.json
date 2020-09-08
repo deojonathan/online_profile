@@ -25,7 +25,8 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/_redirects"
             ],
             "styles": [
               "src/styling/styles.scss",
@@ -129,7 +130,7 @@
           "options": {
             "outputPath": "dist/app",
             "netlifyToken": "ZHBglfVU2pAICMeIbYStKIK_Zn6hATx0sLMeOTJ1Q9g",
-            "siteId": "867ef5b4-38ae-4558-8e43-cde7274280c3"
+            "siteId": "f3c25aef-c595-436d-82db-87afd3aabade"
           }
         }
       }

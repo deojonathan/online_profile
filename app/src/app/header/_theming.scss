@@ -9,17 +9,13 @@
   $background: mat-color($primary);
   $foreground: map-get($primary, default-contrast);
 
-  .nav.container {
-    width: 100%;
+  .header-nav-container, .header-nav{
     background-color: $background;
-    align-items: flex-end;
-
-    .nav-link {
-      color: $foreground;
-    }
-
   }
 
+  .header-nav .nav-link, .menu-icon {
+    color: $foreground;
+  }
   .mat-tab-nav-bar.mat-primary .mat-ink-bar {
     background-color: $foreground;
   }
