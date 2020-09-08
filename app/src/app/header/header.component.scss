@@ -1,4 +1,6 @@
 @import "../../styling/vars";
+@import '~@angular/material/theming';
+
 :host {
   display: flex;
   flex-flow: column wrap;
@@ -12,8 +14,30 @@
   justify-content: flex-end;
 }
 
-.header-nav {
+.header-nav-container .header-nav {
   width: 100%;
   height: 60px;
   align-items: flex-end;
+
+  .nav-link {
+    display: flex;
+    flex-flow: row nowrap;
+    * {
+      margin: 0 5px;
+    }
+  }
+}
+
+.header-nav-container .header-menu {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  height: 64px;
+  @include mat-elevation(2);
+
+  .header-menu-btn {
+    height: 64px;
+  }
 }

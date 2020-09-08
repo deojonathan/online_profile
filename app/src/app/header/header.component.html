@@ -11,7 +11,10 @@
     <div class="tab-label">{{tab.label}}</div>
   </a>
 </nav>
+
+<nav class="header-menu">
 <button mat-button
+        class="header-menu-btn"
         *ngIf="isMobile"
         [matMenuTriggerFor]="menu">
   <mat-icon class="menu-icon">menu</mat-icon>
@@ -22,4 +25,6 @@
      routerLink="{{ tab.routerLink }}"
      routerLinActive="active">{{ tab.label }}</a>
 </mat-menu>
+</nav>
+
 </header>
